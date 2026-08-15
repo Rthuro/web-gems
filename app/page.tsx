@@ -1,69 +1,74 @@
-import Image from "next/image";
+"use client"
+import { webs, categories } from "./config/webs";
+import { Section } from "./components/section"; 
+import { useState } from "react";
+import { Card } from "./components/card";
+import { RotateCw } from "lucide-react";
 
 export default function Home() {
+  const gems = webs.filter((web) => web.isFeatured);
+  const [filter, setFilter] = useState("");
+  
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+   <div className="flex">
+        <div
+            className="
+              w-4 md:w-10
+              bg-[repeating-linear-gradient(135deg,transparent_0,transparent_7px,rgba(0,0,0,0.12)_8px,transparent_9px)]
+              border-r border-black/10
+            "
+          />
+          <main className="w-[calc(100%-16px)] md:w-[calc(100%-80px)] min-h-screen flex flex-col gap-6 mb-6">
+            <div className="flex flex-col gap-1 px-4 pb-4 mt-6 border-b  border-zinc-200 border-w-4">
+              <p className="text-3xl font-bold font-heading text-zinc-800">Website Gems</p>
+              <p className="text-zinc-600 text-sm">What a website gem for me </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 text-zinc-400 text-sm mx-4">
+              <span className="cursor-pointer hover:text-zinc-900 hover:p-2 hover:bg-zinc-100 rounded-full transition-all duration-200 -mr-2" onClick={() => setFilter("")}>
+                  <RotateCw size={13} />
+              </span>
+              <p>
+                Filters: </p>
+            {categories.map((c , i) => (
+            <button key={i} type="button"
+            onClick={() => setFilter(c)}
+            className={`
+                hover:text-zinc-900
+                ${filter === c ? "text-zinc-900 font-medium" : ""}
+            `}>
+                {c}
+            </button>
+            ))}
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        {filter == '' ? (
+          <div className="flex flex-col gap-6 px-2 md:px-12">
+              {categories.map((category) => (
+                <Section 
+                  key={category} 
+                  section={category} 
+                  type="flex"
+                  webs={gems.filter((web) => web.category === category)} 
+                />
+              ))}
+            </div>
+        ): (
+          <div className="grid grid-cols-2 md:grid-cols-3 px-2 md:px-6 py-4 gap-2 bg-[radial-gradient(rgba(148,163,184,0.18)_1px,transparent_1px)] bg-[size:10px_10px] border-y border-zinc-200 ">
+            {webs.filter((web) => web.category === filter).map((web, i) => (
+                <Card key={i} web={web} type="grid" />
+            ))}
+          </div>
+        )}
+            
+            
+          </main>
+          <div
+            className="
+              w-4 md:w-10
+              bg-[repeating-linear-gradient(135deg,transparent_0,transparent_7px,rgba(0,0,0,0.12)_8px,transparent_9px)]
+              border-l border-black/10
+            "
+          />
+   </div>
   );
 }

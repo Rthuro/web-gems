@@ -1,0 +1,17 @@
+export { default as adrian } from './adrian.png';
+export { default as avatartion } from './avartartion.png';
+export { default as biblestrong } from './biblestrong.png';
+export { default as cale } from './cale.png';
+export { default as humation } from './humanation.png';
+export { default as id } from './id.png';
+export { default as kenneth } from './kenneth.png';
+export { default as notionavatar } from './notionavatar.png';
+export { default as openpeeps } from './openpeeps.png';
+export { default as rinkita } from './rinkit.png';
+export { default as watercolor } from './watercolor.png';
+export { default as dicebear } from './dicebear.png';
+export { default as beui } from './beui.png'
+export { default as amicro } from './amicro.png'
+export { default as lanso } from './lanso.png'
+export { default as allsvg } from './allsvg.png'
+export { default as svgrepo } from './svgrepo.png'
