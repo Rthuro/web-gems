@@ -53,7 +53,7 @@ export default function Home() {
               ))}
             </div>
         ): (
-          <div className="grid grid-cols-2 md:grid-cols-3 px-2 md:px-6 py-4 gap-2 bg-[radial-gradient(rgba(148,163,184,0.18)_1px,transparent_1px)] bg-[size:10px_10px] border-y border-zinc-200 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 px-2 md:px-6 py-4 gap-2 bg-[radial-gradient(rgba(148,163,184,0.18)_1px,transparent_1px)] bg-[size:10px_10px] border-y border-zinc-200 ">
             {webs.filter((web) => web.category === filter).map((web, i) => (
                 <Card key={i} web={web} type="grid" />
             ))}
