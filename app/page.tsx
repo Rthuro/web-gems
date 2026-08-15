@@ -21,7 +21,7 @@ export default function Home() {
           <main className="w-[calc(100%-16px)] md:w-[calc(100%-80px)] min-h-screen flex flex-col gap-6 mb-6">
             <div className="flex flex-col gap-1 px-4 pb-4 mt-6 border-b  border-zinc-200 border-w-4">
               <p className="text-3xl font-bold font-heading text-zinc-800">Website Gems</p>
-              <p className="text-zinc-600 text-sm">What a website gem for me </p>
+              <p className="text-zinc-600 text-sm">Websites worth a second look</p>
             </div>
             <div className="flex flex-wrap items-center gap-3 text-zinc-400 text-sm mx-4">
               <span className="cursor-pointer hover:text-zinc-900 hover:p-2 hover:bg-zinc-100 rounded-full transition-all duration-200 -mr-2" onClick={() => setFilter("")}>
