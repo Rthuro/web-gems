@@ -182,7 +182,15 @@ export const webs: WebConfig[] = [
         url: 'https://www.mapcn.dev/',
         description: 'map kit',
         isFeatured: false,
-        types: ['Maps', 'Components']
+        types: ['Maps', 'Components', 'UI']
+    },
+     {
+        category: 'Development',
+        title: 'Great UI',
+        url: 'https://www.great-ui.com/components',
+        description: 'UI components',
+        isFeatured: false,
+        types: ['Transition', 'Components', 'UI']
     },
     {
         category: 'Resources',
