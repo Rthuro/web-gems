@@ -143,11 +143,18 @@ export const webs: WebConfig[] = [
         url: 'https://procedural-sounds.vercel.app/',
         description: 'UI sound kit',
         isFeatured: true,
-        types: ['Sound Kit']
+        types: ['Sound Kit', 'sfx']
+    },{
+        category: 'Development',
+        title: 'ui sfx',
+        url: 'https://uisfx.com/',
+        description: 'UI sound kit',
+        isFeatured: true,
+        types: ['Sound Kit', 'sfx']
     },
     {
         category: 'Resources',
-        title: 'Avatar Generators',
+        title: 'all svg icons',
         img:imgs.allsvg,
         url: 'https://allsvgicons.com/',
         description: 'SVG Icons',
