@@ -120,6 +120,22 @@ export const webs: WebConfig[] = [
         types: ['Watercolor']
     },
     {
+        category: 'Illustration',
+        title: 'Marucav',
+        url: 'https://merucav.netlify.app/',
+        description: 'Custom background',
+        isFeatured: true,
+        types: ['Background', 'Shaders', 'Blobs', 'Texture']
+    },
+    {
+        category: 'Illustration',
+        title: 'Pryzm',
+        url: 'https://pryzm.design/',
+        description: 'create gradient, glass and grain background',
+        isFeatured: false,
+        types: ['Background', 'Glass', 'Gradient']
+    },
+    {
         category: 'Development',
         title: 'Dicebear',
         img: imgs.dicebear,
@@ -159,6 +175,14 @@ export const webs: WebConfig[] = [
         description: 'UI sound kit',
         isFeatured: true,
         types: ['Sound Kit', 'sfx']
+    },
+     {
+        category: 'Development',
+        title: 'mapcn',
+        url: 'https://www.mapcn.dev/',
+        description: 'map kit',
+        isFeatured: false,
+        types: ['Maps', 'Components']
     },
     {
         category: 'Resources',
