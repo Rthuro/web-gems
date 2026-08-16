@@ -51,7 +51,7 @@ export const webs: WebConfig[] = [
     {
         category: 'Inspo',
         title: 'Kons',
-        url: 'https://kons.design/'
+        url: 'https://kons.design/',
         description: 'Portfolio website',
         isFeatured: true,
         types: ['Portfolio']
