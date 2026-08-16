@@ -219,6 +219,14 @@ export const webs: WebConfig[] = [
         isFeatured: true,
         types: ['Sections', 'UI']
     },
+    {
+        category: 'Collections',
+        title: 'BuilderTools',
+        url: 'https://www.buildertools.sh/',
+        description: 'Curated designs and development tools',
+        isFeatured: true,
+        types: ['Tools']
+    },
 ];
 
 export const categories = Array.from(new Set(webs.map((web) => web.category)));
