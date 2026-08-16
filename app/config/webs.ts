@@ -49,6 +49,14 @@ export const webs: WebConfig[] = [
         types: ['Portfolio']
     },
     {
+        category: 'Inspo',
+        title: 'Kons',
+        url: 'https://kons.design/'
+        description: 'Portfolio website',
+        isFeatured: true,
+        types: ['Portfolio']
+    },
+    {
         category: 'Illustration',
         title: 'Bible Strong',
         img: imgs.biblestrong,
