@@ -137,6 +137,13 @@ export const webs: WebConfig[] = [
         description: 'UI components',
         isFeatured: true,
         types: ['UI', 'Components']
+    },{
+        category: 'Development',
+        title: 'Sonaut',
+        url: 'https://procedural-sounds.vercel.app/',
+        description: 'UI sound kit',
+        isFeatured: true,
+        types: ['Sound Kit']
     },
     {
         category: 'Resources',
