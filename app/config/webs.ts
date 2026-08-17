@@ -48,6 +48,14 @@ export const webs: WebConfig[] = [
         isFeatured: true,
         types: ['Portfolio']
     },
+   {
+        category: 'Inspo',
+        title: 'Jody Yuantoro',
+        url: 'https://xyzuan.com/',
+        description: 'Portfolio website',
+        isFeatured: false,
+        types: ['Portfolio']
+    },
     {
         category: 'Inspo',
         title: 'Kons',
