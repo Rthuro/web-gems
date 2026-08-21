@@ -88,7 +88,7 @@ export const webs: WebConfig[] = [
         img: imgs.openpeeps,
         url: 'https://blush.design/collections/open-peeps/open-peeps',
         description: 'Open Peeps avatars',
-        isFeatured: true,
+        isFeatured: false,
         types: ['Avatars', 'Library']
     },
     {
@@ -142,6 +142,14 @@ export const webs: WebConfig[] = [
         description: 'create gradient, glass and grain background',
         isFeatured: false,
         types: ['Background', 'Glass', 'Gradient']
+    }, ,
+    {
+        category: 'Illustration',
+        title: 'IP as Logo Skill',
+        url: 'https://ipaslogo.com/',
+        description: 'free mascot logos',
+        isFeatured: true,
+        types: ['Logos', 'Collection']
     },
     {
         category: 'Development',
@@ -192,13 +200,29 @@ export const webs: WebConfig[] = [
         isFeatured: false,
         types: ['Maps', 'Components', 'UI']
     },
-     {
+    {
         category: 'Development',
         title: 'Great UI',
         url: 'https://www.great-ui.com/components',
         description: 'UI components',
         isFeatured: false,
         types: ['Transition', 'Components', 'UI']
+    },
+    {
+        category: 'Development',
+        title: 'Scrambly',
+        url: 'https://scrambly.design-tools.workers.dev/',
+        description: 'UI components, scramble text',
+        isFeatured: false,
+        types: ['Text', 'UI']
+    },
+    {
+        category: 'Development',
+        title: 'Interaction Kit',
+        url: 'https://interactionkit.org/',
+        description: 'UI components',
+        isFeatured: false,
+        types: ['Components', 'UI']
     },
     {
         category: 'Resources',
@@ -217,6 +241,22 @@ export const webs: WebConfig[] = [
         description: 'SVG Repo',
         isFeatured: true,
         types: ['Icons']
+    },
+    {
+        category: 'Resources',
+        title: 'Abstract Shapes',
+        url: 'https://coolshap.es/',
+        description: '100+ Abstract shapes with cool grainy gradient.',
+        isFeatured: true,
+        types: ['Shapes']
+    },
+    {
+        category: 'Resources',
+        title: 'Departure Mono',
+        url: 'https://departuremono.com/',
+        description: 'A monospaced pixel font with a lo-fi, techy vibe',
+        isFeatured: true,
+        types: ['Fonts']
     },
     {
         category: 'Collections',
