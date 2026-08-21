@@ -150,6 +150,14 @@ export const webs: WebConfig[] = [
         description: 'free mascot logos',
         isFeatured: true,
         types: ['Logos', 'Collection']
+    }, 
+    {
+        category: 'Illustration',
+        title: 'transhumans',
+        url: 'https://www.transhumans.xyz/',
+        description: 'open source illustrations of character transcending their biological barriers',
+        isFeatured: false,
+        types: ['Illustrations', 'Collection']
     },
     {
         category: 'Development',
