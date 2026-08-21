@@ -142,7 +142,7 @@ export const webs: WebConfig[] = [
         description: 'create gradient, glass and grain background',
         isFeatured: false,
         types: ['Background', 'Glass', 'Gradient']
-    }, ,
+    }, 
     {
         category: 'Illustration',
         title: 'IP as Logo Skill',
